@@ -1,0 +1,52 @@
+创建GitHub仓库
+点击右上角的[＋]号
+点击New repository	[创建仓库]
+Repository name 	仓库名
+Description(optional)	描述(任意)
+Initialize this repository with a README
+[初始化README] 
+create repository 点击[创建仓库]即可创建
+
+点击github的头像并点击Settings在Profile中可设置自己的
+名字	[name]
+个人经历	[Bio]
+公司名	[Company]
+
+Update profile 点击[更新个人资料]即可更新
+
+
+输入git，进入git官网下载并安装Git,除选择路径其他都next
+
+git软件安装完成后
+运行cmd控制台,输入git回车,弹出git的命令则添加成功
+
+选择任意位置创建文件夹[用于储存github下载的文件到本地的文件夹]
+下载仓库点击进入仓库的信息,点击Clone or download旁的三角形
+选择SSH模式并复制SSH clone的链接 ,SSH可以记住你的用户名和密码！比HTTP好使
+
+在控制台中输入 git clone {复制[SSH clone的链接]}
+则可以克隆,但通常没有克隆的权限，需添加Public key或克隆HTTPS的
+
+※添加Public key的方法
+点击github的头像并点击Settings在SSH and GPG keys中可添加key
+点击SSH and GPG keys在SSH keys中的generating SSH keys[关联SSH keys]
+点击generating SSH keys这个链接来查看如何关联ssh-key
+在打开的链接中点击Adding a new SSH key to your GitHub account
+来查看添加查找步骤的链接
+Checked for existing SSH keys 
+【检查SSH keys是否存在】
+Generated a new SSH key and added it to the ssh-agent 
+【如果不存在则使用ssh-agent新建SSH keys】[点击该链接进入新建keys]
+在目录文件夹中运行刚才装好的Git Bash(右键文件夹空白处点击Git Bash即可)
+复制并粘贴新建keys的指令把"your_email@example.com"这部分修改为你自己的邮箱！
+$ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+输入完成后，点击三次回车，出现一个方框后,密码生成成功！
+返回Adding a new SSH key to your GitHub account的网页链接中
+Copy the SSH key to your clipboard 拷贝你的SSH key到你的剪贴板上
+$ clip < ~/.ssh/id_rsa.pub 输入完成后，点击回车，密码拷贝成功！
+回到Settings中的在SSH and GPG keys回到这个页面我们再来添加SSH keys
+Title 可以随便填 Key则把刚才的复制的SSH key粘贴进来
+
+这次再在控制台中输入 git clone {复制[SSH clone的链接]}就可以成功克隆啦awa
+
+				————————2019.11.03 Jin
