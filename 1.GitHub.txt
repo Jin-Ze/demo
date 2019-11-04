@@ -50,3 +50,20 @@ Title 可以随便填 Key则把刚才的复制的SSH key粘贴进来
 这次再在控制台中输入 git clone {复制[SSH clone的链接]}就可以成功克隆啦awa
 
 				————————2019.11.03 Jin
+
+
+补充
+2019.11.04
+更快的创建SSH创建keys昨天总结的有点复杂.
+运行git bash
+检查自己电脑上现有的 SSH key：cd ~/. ssh
+如果显示“No such file or directory”，说明这是你第一次使用 git
+=========================================================
+$ ssh-keygen -t rsa -C "邮件地址@youremail.com"
+Generating public/private rsa key pair.
+Enter file in which to save the key (/Users/your_user_directory/.ssh/id_rsa):<回车就好>
+=========================================================
+输入两次密码，输入密码的时候没有输入痕迹的，不要以为什么也没有输入
+$ clip < ~/.ssh/id_rsa.pub 输入完成后，点击回车，密码拷贝成功！
+回到Settings中的在SSH and GPG keys回到这个页面我们再来添加SSH keys
+Title 可以随便填(不要空着) Key则把刚才的复制的SSH key粘贴进来
